@@ -1,6 +1,27 @@
 ﻿const Discord = require("discord.js");
 const client = new Discord.Client();
 var prefix = "$";
+
+client.on('ready', function(){
+    var ms = 10000 ;
+    var setGame = [' رابط','الشيخ بريتي','One Server !',' ! الشيخ بريتي شخصيآ#8888',' يـارب'];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i],`http://www.twitch.tv/one`);
+    }, ms);
+  console.log('---------------');
+  console.log('GaMerZ -Bot Is Online')
+  console.log('---------------')
+});
+
 client.on("message", message => {
 
             if (message.content.startsWith(prefix + "bc")) {
@@ -40,25 +61,6 @@ client.on("message", message => {
       message.author.sendEmbed(Embed11)
     }
 
-client.on('ready', function(){
-    var ms = 10000 ;
-    var setGame = [' رابط','الشيخ بريتي','One Server !',' ! الشيخ بريتي شخصيآ#8888',' يـارب'];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/one`);
-    }, ms);
-  console.log('---------------');
-  console.log('GaMerZ -Bot Is Online')
-  console.log('---------------')
-});
 
 
 
