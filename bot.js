@@ -18,7 +18,7 @@ client.on("message", message => {
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = ['رابط','الشيخ بريتي','One Server !',' ! have fun','! الشيخ بريتي شخصيآ#8888'];
+    var setGame = ['broud','cast','$','server','daily'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -37,4 +37,5 @@ client.on('ready', function(){
 });
 
 
-client.login("NTM2OTkxMzMzMTUyNDU2NzI1.DyfA2Q.hLjrNRaz3swRUl4iXuPBbs69-zc");
+
+client.login(process.env.BOT_TOKEN);
